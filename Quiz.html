@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        .quiz{
+            background-color: lightsalmon;
+            border-radius: 15px;
+            margin: 30% auto;
+            width: 700px;
+            padding: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .option{
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: antiquewhite;
+            transition: all 200ms;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .option:hover{
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+        .quiz h1{
+            padding: 20px;
+        }
+        span{
+            background-color: black;
+            color: beige;
+            padding: 10px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz">
+        <h1>In web design, What does CSS stand for?</h1>
+        <div class="option" onclick="check(this,'A')"><span>&#65;</span> Counter Strike: Source</div>
+        <div class="option" onclick="check(this,'B')"><span>&#66;</span> Corrective Style Sheet</div>
+        <div class="option" onclick="check(this,'C')"><span>&#67;</span> Computer Style Sheet</div>
+        <div class="option" onclick="check(this,'D')"><span>&#68;</span> Cascading Style Sheet</div>
+    </div>
+
+    <script>
+        function check(el,option){
+            let coption='D';
+            if(coption===option){
+                el.style.backgroundColor="green";
+                el.style.color="white";
+            }
+            else{
+                el.style.backgroundColor="red";
+                el.style.color="white";
+            }
+        }
+    </script>
+</body>
+</html>
